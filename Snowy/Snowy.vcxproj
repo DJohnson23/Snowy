@@ -15,9 +15,11 @@
     <ClInclude Include="src\Snowy.h" />
     <ClInclude Include="src\Snowy\Application.h" />
     <ClInclude Include="src\Snowy\Core.h" />
+    <ClInclude Include="src\Snowy\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Snowy\Application.cpp" />
+    <ClCompile Include="src\Snowy\Log.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -67,6 +69,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SN_PLATFORM_WINDOWS;SN_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Snowy\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,6 +84,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SN_PLATFORM_WINDOWS;SN_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Snowy\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

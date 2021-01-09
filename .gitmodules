@@ -1,0 +1,3 @@
+[submodule "Snowy/vendor/spdlog"]
+	path = Snowy/vendor/spdlog
+	url = https://github.com/gabime/spdlog
