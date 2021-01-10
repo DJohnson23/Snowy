@@ -1,3 +1,6 @@
 [submodule "Snowy/vendor/spdlog"]
 	path = Snowy/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Snowy/vendor/GLFW"]
+	path = Snowy/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

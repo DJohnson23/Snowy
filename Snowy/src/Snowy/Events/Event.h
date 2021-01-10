@@ -1,5 +1,6 @@
 #pragma once
 
+#include "snpch.h"
 #include "Snowy/Core.h"
 
 namespace Snowy {
