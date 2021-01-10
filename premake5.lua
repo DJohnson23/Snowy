@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Snowy/vendor/GLFW/include"
+IncludeDir["Glad"] = "Snowy/vendor/Glad/include"
 
 include "Snowy/vendor/GLFW"
+include "Snowy/vendor/Glad"
 
 project "Snowy"
 	location "Snowy"
@@ -37,12 +39,14 @@ project "Snowy"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "Snowy"
 		defines
 		{
 			"SN_PLATFORM_WINDOWS",
-			"SN_BUILD_DLL"
+			"SN_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
