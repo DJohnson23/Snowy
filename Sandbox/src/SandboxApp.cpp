@@ -18,6 +18,7 @@ class Sandbox : public Snowy::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Snowy::ImGuiLayer());
 	}
 
 	~Sandbox() {

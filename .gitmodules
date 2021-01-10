@@ -4,3 +4,6 @@
 [submodule "Snowy/vendor/GLFW"]
 	path = Snowy/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Snowy/vendor/imgui"]
+	path = Snowy/vendor/imgui
+	url = https://github.com/TheCherno/imgui
