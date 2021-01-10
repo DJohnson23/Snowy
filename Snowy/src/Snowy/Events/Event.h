@@ -47,7 +47,7 @@ namespace Snowy {
 		}
 		
 	protected:
-		bool m_Handed = false;
+		bool m_Handled = false;
 	};
 
 	class EventDispatcher {
