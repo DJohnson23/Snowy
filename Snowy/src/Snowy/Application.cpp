@@ -1,3 +1,4 @@
+#include "snpch.h"
 #include "Application.h"
 
 #include "Snowy/Events/ApplicationEvent.h"

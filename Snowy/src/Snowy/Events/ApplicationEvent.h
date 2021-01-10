@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Snowy {
 
 	class SNOWY_API WindowResizeEvent : public Event {

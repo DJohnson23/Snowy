@@ -2,9 +2,6 @@
 
 #include "Snowy/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Snowy {
 
 	// Events in Snowy are currently blocking, meaning when an event occurs it

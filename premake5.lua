@@ -18,6 +18,9 @@ project "Snowy"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "snpch.h"
+	pchsource "Snowy/src/snpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
