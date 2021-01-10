@@ -6,11 +6,16 @@ public:
 	ExampleLayer() : Layer("Example") {}
 
 	void OnUpdate() override {
-		SN_INFO("ExampleLayer::Update");
+		if (Snowy::Input::IsKeyPressed(SN_KEY_TAB)) {
+			SN_TRACE("Tab key is pressed");
+		}
 	}
 
 	void OnEvent(Snowy::Event& event) override {
-		SN_TRACE("{0}", event);
+		if (event.GetEventType() == Snowy::EventType::KeyPressed) {
+			Snowy::KeyPressedEvent& e = (Snowy::KeyPressedEvent&) event;
+			SN_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 

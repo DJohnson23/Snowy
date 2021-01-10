@@ -150,6 +150,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Snowy.h" />
     <ClInclude Include="src\Snowy\Application.h" />
@@ -160,14 +161,18 @@
     <ClInclude Include="src\Snowy\Events\KeyEvent.h" />
     <ClInclude Include="src\Snowy\Events\MouseEvent.h" />
     <ClInclude Include="src\Snowy\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Snowy\Input.h" />
+    <ClInclude Include="src\Snowy\KeyCodes.h" />
     <ClInclude Include="src\Snowy\Layer.h" />
     <ClInclude Include="src\Snowy\LayerStack.h" />
     <ClInclude Include="src\Snowy\Log.h" />
+    <ClInclude Include="src\Snowy\MouseButtonCodes.h" />
     <ClInclude Include="src\Snowy\Window.h" />
     <ClInclude Include="src\snpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Snowy\Application.cpp" />
     <ClCompile Include="src\Snowy\ImGui\ImGuiLayer.cpp" />
