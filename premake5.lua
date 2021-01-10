@@ -1,5 +1,6 @@
 workspace "Snowy"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -16,14 +17,17 @@ IncludeDir["GLFW"] = "Snowy/vendor/GLFW/include"
 IncludeDir["Glad"] = "Snowy/vendor/Glad/include"
 IncludeDir["ImGui"] = "Snowy/vendor/imgui"
 
+
 include "Snowy/vendor/GLFW"
 include "Snowy/vendor/Glad"
 include "Snowy/vendor/imgui"
+
 
 project "Snowy"
 	location "Snowy"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -56,7 +60,6 @@ project "Snowy"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -68,29 +71,30 @@ project "Snowy"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "SN_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SN_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 
 	filter "configurations:Dist"
 		defines "SN_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -114,7 +118,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -124,16 +127,16 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "SN_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SN_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 
 	filter "configurations:Dist"
 		defines "SN_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
