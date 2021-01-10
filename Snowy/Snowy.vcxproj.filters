@@ -40,6 +40,12 @@
     <ClInclude Include="src\Snowy\Events\MouseEvent.h">
       <Filter>Snowy\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Snowy\Layer.h">
+      <Filter>Snowy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Snowy\LayerStack.h">
+      <Filter>Snowy</Filter>
+    </ClInclude>
     <ClInclude Include="src\Snowy\Log.h">
       <Filter>Snowy</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Snowy\Application.cpp">
+      <Filter>Snowy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Snowy\Layer.cpp">
+      <Filter>Snowy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Snowy\LayerStack.cpp">
       <Filter>Snowy</Filter>
     </ClCompile>
     <ClCompile Include="src\Snowy\Log.cpp">

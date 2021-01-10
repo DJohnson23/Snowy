@@ -64,15 +64,18 @@ project "Snowy"
 
 	filter "configurations:Debug"
 		defines "SN_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SN_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 
 	filter "configurations:Dist"
 		defines "SN_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -112,13 +115,16 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "SN_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SN_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 
 	filter "configurations:Dist"
 		defines "SN_DIST"
+		buildoptions "/MD"
 		optimize "On"
