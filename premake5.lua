@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Snowy/vendor/GLFW/include"
 IncludeDir["Glad"] = "Snowy/vendor/Glad/include"
 IncludeDir["ImGui"] = "Snowy/vendor/imgui"
+IncludeDir["glm"] = "Snowy/vendor/glm"
 
 
 include "Snowy/vendor/GLFW"
@@ -39,6 +40,8 @@ project "Snowy"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -47,7 +50,8 @@ project "Snowy"
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -108,7 +112,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Snowy/vendor/spdlog/include",
-		"Snowy/src"
+		"Snowy/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links

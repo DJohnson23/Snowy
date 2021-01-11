@@ -7,3 +7,6 @@
 [submodule "Snowy/vendor/imgui"]
 	path = Snowy/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Snowy/vendor/glm"]
+	path = Snowy/vendor/glm
+	url = https://github.com/g-truc/glm

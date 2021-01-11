@@ -3,7 +3,8 @@
 class ExampleLayer : public Snowy::Layer
 {
 public:
-	ExampleLayer() : Layer("Example") {}
+	ExampleLayer() : Layer("Example") {
+	}
 
 	void OnUpdate() override {
 		if (Snowy::Input::IsKeyPressed(SN_KEY_TAB)) {
