@@ -22,6 +22,9 @@
     <Filter Include="src\Snowy\ImGui">
       <UniqueIdentifier>{263CBB26-92C7-28EB-9BD8-ABDF07E384EB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Snowy\SnowyMath">
+      <UniqueIdentifier>{B55AD8D2-21BC-B5E0-AA29-FC92168AEC9F}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
