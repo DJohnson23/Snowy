@@ -1,5 +1,7 @@
 #include <Snowy.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public Snowy::Layer
 {
 public:
@@ -10,6 +12,12 @@ public:
 		if (Snowy::Input::IsKeyPressed(SN_KEY_TAB)) {
 			SN_TRACE("Tab key is pressed");
 		}
+	}
+
+	void OnImGuiRender() override {
+		//ImGui::Begin("Test");
+		//ImGui::Text("Hello World");
+		//ImGui::End();
 	}
 
 	void OnEvent(Snowy::Event& event) override {
@@ -24,7 +32,6 @@ class Sandbox : public Snowy::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Snowy::ImGuiLayer());
 	}
 
 	~Sandbox() {

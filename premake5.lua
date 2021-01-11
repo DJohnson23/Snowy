@@ -113,6 +113,7 @@ project "Sandbox"
 	{
 		"Snowy/vendor/spdlog/include",
 		"Snowy/src",
+		"Snowy/vendor",
 		"%{IncludeDir.glm}"
 	}
 
